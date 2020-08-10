@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "2804c9af-da1d-4ab3-a64c-c468a3cdd095",
+		"name": "JKİP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AdminLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"kullaniciAdi\": \"cagil\",\r\n    \"sifre\": \"123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50619/api/Kullanici/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Kullanici",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetIhbarlar",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM2YmM1MTNlLWQyMGYtNGFkYi04MWQ4LTYxNGE0OTFlYzQzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJjYWdpbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNTk2OTcxODA5LCJleHAiOjE2Mjg1MDc4MDksImlzcyI6Ind3dy5qa2lwLm5ldCIsImF1ZCI6Ind3dy5qa2lwLm5ldCJ9.rzPAL8f8khDKdYEuqwKyDVXlIfr6uQwuJVBP7o5EItI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:50619/api/Ihbar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Ihbar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetIhbarWithId1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM2YmM1MTNlLWQyMGYtNGFkYi04MWQ4LTYxNGE0OTFlYzQzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJjYWdpbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNTk2OTcxODA5LCJleHAiOjE2Mjg1MDc4MDksImlzcyI6Ind3dy5qa2lwLm5ldCIsImF1ZCI6Ind3dy5qa2lwLm5ldCJ9.rzPAL8f8khDKdYEuqwKyDVXlIfr6uQwuJVBP7o5EItI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:50619/api/Ihbar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Ihbar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostIhbarWithId4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM2YmM1MTNlLWQyMGYtNGFkYi04MWQ4LTYxNGE0OTFlYzQzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJjYWdpbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNTk2OTcxODA5LCJleHAiOjE2Mjg1MDc4MDksImlzcyI6Ind3dy5qa2lwLm5ldCIsImF1ZCI6Ind3dy5qa2lwLm5ldCJ9.rzPAL8f8khDKdYEuqwKyDVXlIfr6uQwuJVBP7o5EItI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ihbarDurumuId\": 1,\r\n    \"ozet\": \"Test Özet 1\",\r\n    \"yer\": \"Test Yer 1\",\r\n    \"tarih\": \"2020-08-01T01:01:00\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50619/api/Ihbar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Ihbar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutIhbarWithId4",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM2YmM1MTNlLWQyMGYtNGFkYi04MWQ4LTYxNGE0OTFlYzQzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJjYWdpbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNTk2OTcxODA5LCJleHAiOjE2Mjg1MDc4MDksImlzcyI6Ind3dy5qa2lwLm5ldCIsImF1ZCI6Ind3dy5qa2lwLm5ldCJ9.rzPAL8f8khDKdYEuqwKyDVXlIfr6uQwuJVBP7o5EItI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"ihbarDurumuId\": 1,\r\n    \"ozet\": \"Test Özet 3\",\r\n    \"yer\": \"Test Yer 3\",\r\n    \"tarih\": \"2020-08-03T03:03:00\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50619/api/Ihbar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Ihbar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostIhbarWithId5OlayIdleri1ve2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM2YmM1MTNlLWQyMGYtNGFkYi04MWQ4LTYxNGE0OTFlYzQzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJjYWdpbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNTk2OTcxODA5LCJleHAiOjE2Mjg1MDc4MDksImlzcyI6Ind3dy5qa2lwLm5ldCIsImF1ZCI6Ind3dy5qa2lwLm5ldCJ9.rzPAL8f8khDKdYEuqwKyDVXlIfr6uQwuJVBP7o5EItI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ihbarDurumuId\": 2,\r\n    \"ozet\": \"Test Özet 2\",\r\n    \"yer\": \"Test Yer 2\",\r\n    \"tarih\": \"2020-08-02T02:02:00\",\r\n    \"olayIdleri\": [\r\n        1, 2\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50619/api/Ihbar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Ihbar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteIhbarWithId4",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM2YmM1MTNlLWQyMGYtNGFkYi04MWQ4LTYxNGE0OTFlYzQzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJjYWdpbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNTk2OTcxODA5LCJleHAiOjE2Mjg1MDc4MDksImlzcyI6Ind3dy5qa2lwLm5ldCIsImF1ZCI6Ind3dy5qa2lwLm5ldCJ9.rzPAL8f8khDKdYEuqwKyDVXlIfr6uQwuJVBP7o5EItI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:50619/api/Ihbar/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Ihbar",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteIhbarWithId5",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM2YmM1MTNlLWQyMGYtNGFkYi04MWQ4LTYxNGE0OTFlYzQzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJjYWdpbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNTk2OTcxODA5LCJleHAiOjE2Mjg1MDc4MDksImlzcyI6Ind3dy5qa2lwLm5ldCIsImF1ZCI6Ind3dy5qa2lwLm5ldCJ9.rzPAL8f8khDKdYEuqwKyDVXlIfr6uQwuJVBP7o5EItI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:50619/api/Ihbar/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Ihbar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContextSeed",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM2YmM1MTNlLWQyMGYtNGFkYi04MWQ4LTYxNGE0OTFlYzQzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJjYWdpbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNTk2OTcxODA5LCJleHAiOjE2Mjg1MDc4MDksImlzcyI6Ind3dy5qa2lwLm5ldCIsImF1ZCI6Ind3dy5qa2lwLm5ldCJ9.rzPAL8f8khDKdYEuqwKyDVXlIfr6uQwuJVBP7o5EItI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:50619/api/Context/Seed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50619",
+					"path": [
+						"api",
+						"Context",
+						"Seed"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
