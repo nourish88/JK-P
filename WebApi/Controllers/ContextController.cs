@@ -21,13 +21,12 @@ namespace WebApi.Controllers
         private readonly IOlayService _olayService;
         private readonly IOlayIhbarService _olayIhbarService;
         private readonly IPersonelService _personelService;
-        private readonly IPersonelIhbarService _personelIhbarService;
         private readonly IKullaniciService _kullaniciService;
         private readonly IRolService _rolService;
         private readonly SqlBase _sql;
 
         public ContextController(IFaaliyetService faaliyetService, IIhbarService ihbarService, IIhbarDurumuService ihbarDurumuService, IIslemDurumuService islemDurumuService,
-            IOlayService olayService, IOlayIhbarService olayIhbarService, IPersonelService personelService, IPersonelIhbarService personelIhbarService,
+            IOlayService olayService, IOlayIhbarService olayIhbarService, IPersonelService personelService, 
             IKullaniciService kullaniciService, IRolService rolService, SqlBase sql)
         {
             _faaliyetService = faaliyetService;
@@ -37,7 +36,6 @@ namespace WebApi.Controllers
             _olayService = olayService;
             _olayIhbarService = olayIhbarService;
             _personelService = personelService;
-            _personelIhbarService = personelIhbarService;
             _kullaniciService = kullaniciService;
             _rolService = rolService;
             _sql = sql;
@@ -52,7 +50,6 @@ namespace WebApi.Controllers
                 // database clear:
                 _sql.ExecuteSql("delete from Faaliyet");
                 _sql.ExecuteSql("delete from OlayIhbar");
-                _sql.ExecuteSql("delete from PersonelIhbar");
                 _sql.ExecuteSql("delete from IslemDurumu");
                 _sql.ExecuteSql("delete from Ihbar");
                 _sql.ExecuteSql("delete from IhbarDurumu");
@@ -70,7 +67,6 @@ namespace WebApi.Controllers
                 _sql.ExecuteSql("DBCC CHECKIDENT ('Ihbar', RESEED, 0)");
                 _sql.ExecuteSql("DBCC CHECKIDENT ('OlayIhbar', RESEED, 0)");
                 _sql.ExecuteSql("DBCC CHECKIDENT ('IhbarDurumu', RESEED, 0)");
-                _sql.ExecuteSql("DBCC CHECKIDENT ('PersonelIhbar', RESEED, 0)");
 
                 // lists:
                 List<IhbarDurumu> ihbarDurumlari = new List<IhbarDurumu>
@@ -145,25 +141,6 @@ namespace WebApi.Controllers
                     }
                 };
 
-                List<PersonelIhbar> personelIhbarlar = new List<PersonelIhbar>
-                {
-                    new PersonelIhbar
-                    {
-                        Id = 1, IhbarId = 1, PersonelId = 4
-                    },
-                    new PersonelIhbar
-                    {
-                        Id = 2, IhbarId = 1, PersonelId = 5
-                    },
-                    new PersonelIhbar
-                    {
-                        Id = 3, IhbarId = 2, PersonelId = 5
-                    },
-                    new PersonelIhbar
-                    {
-                        Id = 4, IhbarId = 3, PersonelId = 1
-                    }
-                };
 
                 List<IhbarModel> ihbarlar = new List<IhbarModel>
                 {
@@ -293,12 +270,6 @@ namespace WebApi.Controllers
                 {
                     olayIhbar.Id = 0;
                     _olayIhbarService.AddOlayIhbar(olayIhbar);
-                }
-
-                foreach (var personelIhbar in personelIhbarlar)
-                {
-                    personelIhbar.Id = 0;
-                    _personelIhbarService.AddPersonelIhbar(personelIhbar);
                 }
 
                 foreach (var rol in roller)

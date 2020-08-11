@@ -20,6 +20,5 @@ namespace Entity.Entities
 
         public List<OlayIhbar> OlayIhbarlar { get; set; }
         public List<Faaliyet> Faaliyetler { get; set; }
-        public List<PersonelIhbar> PersonelIhbarlar { get; set; }
     }
 }

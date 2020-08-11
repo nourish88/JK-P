@@ -47,7 +47,6 @@ namespace MVC
                 });
 
             services.AddScoped<IOlayIhbarService, OlayIhbarService>();
-            services.AddScoped<IPersonelIhbarService, PersonelIhbarService>();
             services.AddScoped<IFaaliyetService, FaaliyetService>();
             services.AddScoped<IIslemDurumuService, IslemDurumuService>();
             services.AddScoped<IOlayService, OlayService>();
@@ -58,7 +57,6 @@ namespace MVC
             services.AddScoped<IRolService, RolService>();
 
             services.AddScoped<OlayIhbarDalBase, OlayIhbarDal>();
-            services.AddScoped<PersonelIhbarDalBase, PersonelIhbarDal>();
             services.AddScoped<FaaliyetDalBase, FaaliyetDal>();
             services.AddScoped<IslemDurumuDalBase, IslemDurumuDal>();
             services.AddScoped<OlayDalBase, OlayDal>();

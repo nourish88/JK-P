@@ -13,7 +13,6 @@ namespace DataAccess.EntityFramework.Contexts
         public DbSet<Olay> Olay { get; set; }
         public DbSet<OlayIhbar> OlayIhbar { get; set; }
         public DbSet<Personel> Personel { get; set; }
-        public DbSet<PersonelIhbar> PersonelIhbar { get; set; }
         public DbSet<Kullanici> Kullanici { get; set; }
         public DbSet<Rol> Rol { get; set; }
 
