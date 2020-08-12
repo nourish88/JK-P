@@ -318,18 +318,6 @@ namespace Core.DataAccess.EntityFramework.Bases
             }
         }
 
-        public virtual void ExecuteSql(string sql)
-        {
-            try
-            {
-                _context.Database.ExecuteSqlRaw(sql);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
         #region Dispose
         private bool disposed = false;
 
